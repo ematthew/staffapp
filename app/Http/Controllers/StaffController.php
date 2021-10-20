@@ -39,18 +39,19 @@ class StaffController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'staffNumber'         =>  'required',
-            'firstName'           =>  'required',
-            'secondName'          =>  'required',
-            'age'                 =>  'required', 
-            'datebirth'           => 'required',
-            'dateEmployment'      =>  'required',
-            'speciality'          =>  'required',]);
 
-        Staff::create($request->all());
-
+        $staff = new Staff();
+        $staff->staffNumber     =$request->input('staffNumber');
+        $staff->firstName     =$request->input('firstName');
+        $staff->secondName     =$request->input('secondName');
+        $staff->age     =$request->input('age');
+        $staff->datebirth     =$request->input('datebirth');
+        $staff->dateEmployment     =$request->input('dateEmployment');
+        $staff->speciality     =$request->input('speciality');
+        $staff->save();
         return redirect()->route('staffs.index')->with('success','Staff information has been created Successfully');
+
+        
     }
 
     /**
@@ -71,7 +72,8 @@ class StaffController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Staff $staff)
-    {
+    {   
+
         return view('staffs.edit',compact('staff'));
     }
 
@@ -84,7 +86,34 @@ class StaffController extends Controller
      */
     public function update(Request $request, Staff $staff)
     {
-        //
+
+        // $request->validate([
+        //     'name' => 'required',
+        //     'detail' => 'required',
+        // ]);
+    
+        // $staff->update($request->all());
+    
+        // return redirect()->route('staffs.index')
+        //                 ->with('success','Staff updated successfully');
+
+
+
+
+
+
+        $staff = new Staff();
+        $staff->staffNumber             =  $request->input('staffNumber');
+        $staff->firstName               =  $request->input('firstName');
+        $staff->secondName              =  $request->input('secondName');
+        $staff->age                     =  $request->input('age');
+        $staff->datebirth               =  $request->input('datebirth');
+        $staff->dateEmployment          =  $request->input('dateEmployment');
+        $staff->speciality              =  $request->input('speciality');
+        $staff->update($request->all());
+        // $staff->update();
+        return redirect()->route('staffs.index')->with('success','Staff information has been update Successfully');
+
     }
 
     /**
@@ -95,6 +124,19 @@ class StaffController extends Controller
      */
     public function destroy(Staff $staff)
     {
-        //
+       
+
+          $staff->delete();
+    
+        return redirect()->route('staffs.index')
+                        ->with('success','Staff deleted successfully');
+
+
+
+
+        // $staff   = Staff::find($id);
+        // $staff->delete();
+        //  return redirect()->route('staffs.index')->with('success','Staff information has been deleted Successfully');
     }
+
 }

@@ -2,9 +2,9 @@
  
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-12 margin-tb">
             <div class="pull-left">
-                <h2>Employee Staff Management Portal</h2>
+                <h2 class="text-center">Employee Staff Management Portal</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('staffs.create') }}"> Create New Product</a>
@@ -17,8 +17,16 @@
             <p>{{ $message }}</p>
         </div>
     @endif
+
+
    
-    <table class="table table-bordered">
+    <div class="card mb-3">
+        <img src="https://www.ei-ie.org/img/Future-of-work-in-education.jpg?p=card" class="card-img-top" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+            <div class="col-12">
+                <h5 class="card-title" align="center">Employee Staff Management Portal </h5>
+                
+                <table class="table table-bordered">
         <tr>
             <th>No</th>
             <th>Staff Number</th>
@@ -57,6 +65,13 @@
         </tr>
         @endforeach
     </table>
+
+
+
+
+            </div>
+        </div>
+    </div>
   
     {!! $staffs->links() !!}
       

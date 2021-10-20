@@ -29,37 +29,37 @@
    
         <div class="form-group">
                     <label>Staff number</label>
-                    <input name="staffNumber" type="text" class="form-control" placeholder="Enter your Staff number here" value="$staff->staffNumber">
+                    <input name="staffNumber" type="text" class="form-control" placeholder="Enter your Staff number here">
                   </div>
                    
                    <div class="form-group">
                     <label>First Name</label>
-                    <input name="firstName" type="text" class="form-control" placeholder="Enter First Name here" value="$staff->firstname">
+                    <input name="firstName" type="text" class="form-control" placeholder="Enter First Name here">
                   </div>
 
                   <div class="form-group">
                     <label>Second Name</label>
-                    <input name="secondName" type="text" class="form-control" placeholder="Enter Second Name here" value="$staff->secondName">
+                    <input name="secondName" type="text" class="form-control" placeholder="Enter Second Name here">
                   </div>
 
                   <div class="form-group">
                     <label>Age</label>
-                    <input name="age" type="text" class="form-control" placeholder="Enter Age here" value="$staff->age">
+                    <input name="age" type="text" class="form-control" placeholder="Enter Age here">
                   </div>
 
                   <div class="form-group">
                     <label>Date of Birth</label>
-                    <input name="datebirth" type="text" class="form-control" placeholder="Enter date of birth here" value="$staff->datebirth">
+                    <input name="datebirth" type="text" class="form-control" placeholder="Enter date of birth here">
                   </div>
 
                   <div class="form-group">
                     <label>Date of Employment</label>
-                    <input name="dateEmployment" type="text" class="form-control" placeholder="Enter Date of Employment here" value="$staff->dateEmployment">
+                    <input name="dateEmployment" type="text" class="form-control" placeholder="Enter Date of Employment here">
                   </div>
 
                   <div class="form-group">
                     <label>Speciality</label>
-                    <input name="speciality" type="text" class="form-control" placeholder="Enter Speciality field of study here" value="staff->speciality">
+                    <input name="speciality" type="text" class="form-control" placeholder="Enter Speciality field of study here">
                   </div>
                   <br>
 

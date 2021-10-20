@@ -15,13 +15,13 @@ class CreateStaffsTable extends Migration
     {
         Schema::create('staffs', function (Blueprint $table) {
             $table->id();
-            $table->string('staffNumber');
-            $table->string('firstName');
-            $table->string('secondName');
-            $table->integer('age');
-            $table->string('datebirth');
-            $table->string('dateEmployment');
-            $table->string('speciality');
+            // $table->string('staffNumber');
+            // $table->string('firstName');
+            // $table->string('secondName');
+            // $table->integer('age');
+            // $table->string('datebirth');
+            // $table->string('dateEmployment');
+            // $table->string('speciality');
             $table->timestamps();
         });
     }

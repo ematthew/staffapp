@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New Staff</h2>
+            <h2 class="text-center">Add New Staff</h2>
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('staffs.index') }}"> Back</a>
@@ -39,7 +39,7 @@
                 @csrf
                   <div class="form-group">
                     <label>Staff number</label>
-                    <input name="stafNumber" type="text" class="form-control" placeholder="Enter your Staff number here">
+                    <input name="staffNumber" type="text" class="form-control" placeholder="Enter your Staff number here">
                   </div>
                    
                    <div class="form-group">
@@ -59,7 +59,7 @@
 
                   <div class="form-group">
                     <label>Date of Birth</label>
-                    <input name="age" type="text" class="form-control" placeholder="Enter date of birth here">
+                    <input name="datebirth" type="text" class="form-control" placeholder="Enter date of birth here">
                   </div>
 
                   <div class="form-group">
